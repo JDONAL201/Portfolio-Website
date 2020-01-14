@@ -1,0 +1,119 @@
+
+/* MASTER STYLES */
+
+body /*Entire document*/
+{
+    margin: 0px; /*remove the margin*/
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: 1fr; /*Use grid and create template coloumns using 1fr (1 fractional unit)*/
+
+}
+
+/* NAV STYLES */
+.navagation-Wrapper
+{
+    display: flex; /* flex allows us to ignore child divs of this div*/
+    justify-content: space-between; /*takes open space to justfiy the space between*/
+    padding: 38px;
+}
+.left-side
+{
+    display:flex;
+}
+
+.navagation-Wrapper > .left-side > div /*Traversing a tree in css, start with nav wrapper , ignore it , go to left side , ignore it , go to the div inside here and style these divs*/
+{
+    margin-right: 20px;
+    font-size: 0.9em; /*em means percent , so 90% of usual size*/
+    text-transform:uppercase; /*Can use css to change case of characters*/
+}
+
+.nav-link-wrapper
+{
+    height:22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+.nav-link-wrapper a /* inside the nav link wrapper , grab the (a) link */
+{
+    color: gray;
+    text-decoration: none;
+    transition: color 0.5s;
+
+}
+
+.nav-link-wrapper:hover /*check for when hover occurs (ccs built in)*/
+{
+    border-bottom:1px solid black;
+}
+
+.nav-link-wrapper a:hover /*hover state for the link */
+{
+    border-bottom: black;
+}
+
+/* PORTFOLIO STYLES */
+
+.portfolio-items-wrapper
+{
+    display: grid; /*Display everything inside the grid as a grid*/
+    grid-template-columns: 1fr 1fr 1fr; /*display as 3 coloumns*/
+}
+.portfolio-item-wrapper
+{
+    position: relative; /*required if want absolute elements as children*/
+
+}
+
+.portolio-image-background
+{
+    height: 350px;
+    width: 100%;
+    background-size: cover; /*crop images to sit beside each other if images different sizes*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image-text-wrapper
+{
+    position: absolute; /*must be in a parent element that has a relative position*/
+    top:0;/*position at the top*/
+    display: flex;/*use flex box*/
+    flex-direction: column;/*set the direction to coloumn*/
+    justify-content: center;/*center the items left to right*/
+    align-items: center;/*center items top to bottom*/
+    height: 100%;/*take up the full parent height*/
+    text-align: center;/*all text inside to be centred*/
+    padding-left: 40%;/*padding on the left*/
+    padding-right: 40%;/*padding on the right*/
+
+
+}
+
+.logo-wrapper img /*the logos on top of background images*/
+{
+    width:100%;
+    margin-bottom: 20px;
+}
+
+.image-text-wrapper .subtitle /*Start of text animation (transparent not visible)*/
+{
+    font-weight: 300;
+    transition: 1s;
+    color: transparent;
+}
+.image-text-wrapper:hover .subtitle /*End of text animation (only when hover occurs) visible and coloured*/
+{
+    font-weight: 300; /*make things bold etc*/
+    color:cyan; /*text color*/
+}
+
+.image-darken
+{
+    transition: 1s; /*transiton 1 second*/
+    filter: brightness(10%);
+}

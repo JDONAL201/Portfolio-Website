@@ -1,0 +1,7 @@
+TODOS for the simple project (take further after steps complete)
+
+Create a bio page.
+
+Change home page to portfolio page
+
+Portfolio page , each image link to page containing project video and description
