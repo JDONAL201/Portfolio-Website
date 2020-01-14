@@ -6,7 +6,7 @@ body /*Entire document*/
     margin: 0px; /*remove the margin*/
     background-color: rgb(15, 15, 15); /*The entire page background colour*/
    /* font-family: 'Courier New', Courier, monospace;*/
-    font-family: 'Poiret One', cursive;
+    font-family: 'Poiret One', 'Courier New', Courier, monospace;
 }
 
 .container
@@ -42,7 +42,7 @@ body /*Entire document*/
     font-size: x-large;
     text-transform:uppercase; /*Can use css to change case of characters*/
 }
-.navagation-Wrapper > .centered > div /*Traversing a tree in css, start with nav wrapper , ignore it , go to left side , ignore it , go to the div inside here and style these divs*/
+.navagation-Wrapper > .centered > .title /*Traversing a tree in css, start with nav wrapper , ignore it , go to left side , ignore it , go to the div inside here and style these divs*/
 {
 
     /*font-size: 0.9em; /*em means percent , so 90% of usual size*/
@@ -51,6 +51,10 @@ body /*Entire document*/
     color: white;
 }
 
+.navagation-Wrapper > .centered a
+{
+    color: green;
+}
 .navagation-Wrapper > .right-side > div /*Traversing a tree in css, start with nav wrapper , ignore it , go to left side , ignore it , go to the div inside here and style these divs*/
 {
     margin-left: 20px;
@@ -106,6 +110,7 @@ body /*Entire document*/
     background-position: center;
     background-repeat: no-repeat;
     filter: brightness(10%);
+ 
 }
 
 .image-text-wrapper
@@ -158,26 +163,25 @@ body /*Entire document*/
 .profile-image-wrapper
 {
     position: fixed;
-    top: 20%;
+    top: 15%;
     left: 50%;
     margin-left: -190px;
+    
 }
 .profile-image-wrapper img
 {
     border-radius: 50%;
     width: 70%;
+    border:2px solid black;
 }
 
 .profile-content-wrapper
 {
     position: fixed;
-    top: 60%;
-    /* left: 50%; */
-    /* margin-left: 50%; */
+    top: 55%;
     margin-left: 24%;
     width: 50%;
     text-align: center; 
-
     color: white;
 }
 
@@ -190,3 +194,30 @@ body /*Entire document*/
 {
     color: grey !important;
 }
+.icon-wrapper
+{
+    position: absolute;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;/*center the items left to right*/
+    align-items: left;/*center items top to bottom*/
+   
+    width: 20%;
+    height: 10%;
+  
+    top: 90%;
+    margin-left: 39%; 
+}
+.icon-wrapper a img
+{
+    width:80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50%;
+
+}
+p1
+{
+    font-size: large;
+}
+
